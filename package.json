@@ -3,13 +3,13 @@
   "version": "4.0.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "latest",
+    "@material-ui/core": "^4.6",
     "@material-ui/icons": "^4.5.1",
-    "gatsby": "latest",
-    "gatsby-theme-material-ui": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-helmet": "latest"
+    "gatsby": "^2.17",
+    "gatsby-theme-material-ui": "^1.0",
+    "react": "^16.11",
+    "react-dom": "^16.11",
+    "react-helmet": "^5.2"
   },
   "scripts": {
     "develop": "gatsby develop",

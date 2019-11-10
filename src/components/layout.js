@@ -25,7 +25,7 @@ import "./layout.css";
 import ExpCard from "./card";
 import ScrollProgressBar from "./scroll-progress";
 import theme, { COLORS } from "../util/theme";
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     bottom: theme.spacing(2),
@@ -45,7 +45,7 @@ function ScrollTop(props) {
     threshold: 100
   });
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
       "#back-to-top-anchor"
     );
@@ -57,7 +57,7 @@ function ScrollTop(props) {
 
   return (
     <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.root}>
+      <div onClick={handleClick} role='presentation' className={classes.root}>
         {children}
       </div>
     </Zoom>
@@ -89,11 +89,11 @@ const NavAppbar = () => {
   return (
     <AppBar style={{ boxShadow: "none" }}>
       <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
+        {/* <IconButton edge='start' color='inherit' aria-label='menu'>
           <MenuIcon />
-        </IconButton>
+        </IconButton> */}
         <Typography
-          variant="h6"
+          variant='h6'
           style={{
             fontFamily: "Fugaz One",
             flexGrow: 1
@@ -102,18 +102,14 @@ const NavAppbar = () => {
           {/* {data.site.siteMetadata.title} */}
         </Typography>
         <div style={{ paddingRight: 30 }}>
-          <a href="/" style={linkStyles}>
+          <a href='/' style={linkStyles}>
             Home
           </a>
-          <a href="#experiance" style={linkStyles}>
+          <a href='#experiance' style={linkStyles}>
             Experiance
           </a>
-          <a href="#skills" style={linkStyles}>
+          <a href='#skills' style={linkStyles}>
             Skills
-          </a>
-
-          <a href="#contactMe" style={linkStyles}>
-            Contact Me
           </a>
         </div>
       </Toolbar>
@@ -138,7 +134,7 @@ export default function BackToTop(props) {
       // console.log("enratry:", entry[0].intersectionRatio)
       // entry[0].target.classList.add("focus")
     });
-    Array.from(cards).forEach(e => {
+    Array.from(cards).forEach((e) => {
       observer.observe(e);
     });
 
@@ -157,8 +153,8 @@ export default function BackToTop(props) {
         </Helmet>
         <CssBaseline />
         <NavAppbar />
-        <Toolbar id="back-to-top-anchor" />
-        <Container maxWidth="lg">
+        <Toolbar id='back-to-top-anchor' />
+        <Container maxWidth='lg'>
           <Box>
             <div
               style={{
@@ -176,7 +172,7 @@ export default function BackToTop(props) {
           </Box>
         </Container>
         <ScrollTop {...props}>
-          <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <Fab color='secondary' size='small' aria-label='scroll back to top'>
             <KeyboardArrowUpIcon />
           </Fab>
         </ScrollTop>

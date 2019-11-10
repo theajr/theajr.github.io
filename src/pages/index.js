@@ -20,7 +20,7 @@ import WhoAmI from "../components/whoami";
 import { experiances, skills } from "../util/data";
 import SkillCard from "../components/skillcard";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   fab: {
     margin: theme.spacing(1)
   },
@@ -34,17 +34,17 @@ function FloatingActionButtons() {
 
   return (
     <div>
-      <Fab color="primary" aria-label="add" className={classes.fab}>
+      <Fab color='primary' aria-label='add' className={classes.fab}>
         <AddIcon />
       </Fab>
-      <Fab color="secondary" aria-label="edit" className={classes.fab}>
+      <Fab color='secondary' aria-label='edit' className={classes.fab}>
         <EditIcon />
       </Fab>
-      <Fab variant="extended" aria-label="delete" className={classes.fab}>
+      <Fab variant='extended' aria-label='delete' className={classes.fab}>
         <NavigationIcon className={classes.extendedIcon} />
         Extended
       </Fab>
-      <Fab disabled aria-label="delete" className={classes.fab}>
+      <Fab disabled aria-label='delete' className={classes.fab}>
         <DeleteIcon />
       </Fab>
     </div>
@@ -53,9 +53,9 @@ function FloatingActionButtons() {
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant='body2' color='textSecondary' align='center'>
       {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color='inherit' href='https://material-ui.com/'>
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
@@ -76,16 +76,16 @@ export default function Index() {
   return (
     <Layout>
       <Intro />
-      <Heading title="&#129300; Who am I?">
+      <Heading title='&#129300; Who am I?'>
         <WhoAmI />
       </Heading>
-      <Heading title="&#x1F4BC;  Work Experiance">
-        {experiances.map(e => (
+      <Heading title='&#x1F4BC;  Work Experiance' id='experiance'>
+        {experiances.map((e) => (
           <ExpCard {...e} key={e.logo} />
         ))}
       </Heading>
 
-      <Heading title="Skills" id="skills">
+      <Heading title='Skills' id='skills'>
         <div
           style={{
             display: "grid",
@@ -97,7 +97,7 @@ export default function Index() {
             columnGap: 30
           }}
         >
-          {skills.map(i => (
+          {skills.map((i) => (
             <SkillCard
               key={i.svg}
               src={require(`../images/skills/${i.svg}`)}

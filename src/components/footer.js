@@ -15,7 +15,7 @@ const footerLinks = {
   marginLeft: 10,
   marginRight: 10
 };
-const Footer = props => {
+const Footer = (props) => {
   return (
     <footer
       style={{
@@ -24,29 +24,25 @@ const Footer = props => {
 
         backgroundColor: "#fff",
         display: "grid",
-        gridTemplateColumns: "30% auto"
+        gridTemplateColumns: "1fr"
       }}
     >
       <div style={{ textAlign: "center" }}>
         {/* <Heading title="Stay in touch" align="left" variant="h6" paddingTop={0}> */}
-        <a style={footerLinks} href="https://www.linkedin.com/in/theajr/">
+        <a style={footerLinks} href='https://www.linkedin.com/in/theajr/'>
           LinkedIn
         </a>
-        <a style={footerLinks} href="https://github.com/theajr">
+        <a style={footerLinks} href='https://github.com/theajr'>
           GitHub
         </a>
-        <a style={footerLinks} href="skype:ajayreddy.pathuri?userinfo">
+        <a style={footerLinks} href='skype:ajayreddy.pathuri?userinfo'>
           Skype
         </a>
-        <a style={footerLinks} href="https://www.facebook.com/ajr.jar">
+        <a style={footerLinks} href='https://www.facebook.com/ajr.jar'>
           Facebook
         </a>
       </div>
-      <div>
-        <Heading title="Contact Me">
-          <ContactMe />
-        </Heading>
-      </div>
+      <div>{/* <Heading title='Contact Me'><ContactMe /></Heading> */}</div>
     </footer>
   );
 };
